@@ -75,18 +75,6 @@ class NoteListScreen extends StatelessWidget {
                             Colors.purple.withOpacity(0.4))),
                     onPressed: () {
                       context.push('/add');
-                      // final today = DateTime.now();
-                      // final useCase = context.read<NoteUseCase>();
-                      // useCase.addNote(
-                      //   "memoList",
-                      //   Note(
-                      //     today.millisecondsSinceEpoch.toString(),
-                      //     "test${useCase.getCounter()}",
-                      //     "hello world!",
-                      //     today,
-                      //   ),
-                      // );
-                      // useCase.increaseCounter();
                     },
                     child: const Icon(
                       Icons.add,

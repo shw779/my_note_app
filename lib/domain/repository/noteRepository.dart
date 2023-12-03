@@ -8,6 +8,4 @@ abstract class NoteRepository {
   void deleteNoteList(Box<Note> box, List<int> keys);
   void putNote(Box<Note> box, int index, Note obj);
   void addNote(Box<Note> box, String name, Note obj);
-  int? getCounter(Box<int> counterBox);
-  void increaseCounter(Box<int> counterBox);
 }

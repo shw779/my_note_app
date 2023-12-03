@@ -10,11 +10,9 @@ Future getProviders() async {
   await Hive.initFlutter();
   Hive.registerAdapter(NoteAdapter());
   final box = await Hive.openBox<Note>('memoList');
-  final counterBox = await Hive.openBox<int>('counter');
-  counterBox.add(0);
   LocalDataSource dataSource = LocalDataSource();
   NoteRepository repository = NoteRepositoryImpl(dataSource);
-  NoteUseCase noteUseCase = NoteUseCase(repository, box, counterBox);
+  NoteUseCase noteUseCase = NoteUseCase(repository, box);
 
   return [
     ChangeNotifierProvider(create: (_) => noteUseCase),

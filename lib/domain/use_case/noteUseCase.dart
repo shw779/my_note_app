@@ -6,8 +6,7 @@ import 'package:my_note_app/domain/repository/noteRepository.dart';
 class NoteUseCase with ChangeNotifier {
   final NoteRepository repository;
   final Box<Note> box;
-  final Box<int> counterBox;
-  NoteUseCase(this.repository, this.box, this.counterBox);
+  NoteUseCase(this.repository, this.box);
 
   bool readOnly = true;
   late TextEditingController titleController;
@@ -30,7 +29,6 @@ class NoteUseCase with ChangeNotifier {
         today,
       ),
     );
-    increaseCounter();
     notifyListeners();
   }
 
@@ -57,14 +55,6 @@ class NoteUseCase with ChangeNotifier {
   void deleteNoteList(List<int> keys) {
     repository.deleteNoteList(box, keys);
     notifyListeners();
-  }
-
-  int? getCounter() {
-    return repository.getCounter(counterBox);
-  }
-
-  void increaseCounter() {
-    repository.increaseCounter(counterBox);
   }
 
   void setEdit() {

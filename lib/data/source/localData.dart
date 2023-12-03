@@ -32,14 +32,4 @@ class LocalDataSource {
   void putNote(Box<Note> box, int index, Note obj) {
     box.putAt(index, obj);
   }
-
-  int? getCounter(Box<int> counterBox) {
-    return counterBox.get(0, defaultValue: 0);
-  }
-
-  void increaseCounter(Box<int> counterBox) {
-    int counter = getCounter(counterBox) ?? 0;
-
-    counterBox.putAt(0, ++counter);
-  }
 }

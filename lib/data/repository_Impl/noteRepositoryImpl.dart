@@ -36,12 +36,4 @@ class NoteRepositoryImpl implements NoteRepository {
   void addNote(Box<Note> box, String name, Note obj) {
     dataSource.addNote(box, name, obj);
   }
-
-  int? getCounter(Box<int> counterBox) {
-    return dataSource.getCounter(counterBox);
-  }
-
-  void increaseCounter(Box<int> counterBox) {
-    dataSource.increaseCounter(counterBox);
-  }
 }
