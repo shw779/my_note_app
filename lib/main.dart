@@ -1,4 +1,3 @@
-import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_note_app/di/dependency.dart';
@@ -6,7 +5,6 @@ import 'package:my_note_app/presentation/add.dart';
 import 'package:my_note_app/presentation/detail.dart';
 import 'package:my_note_app/presentation/index.dart';
 import 'package:my_note_app/presentation/splash/splash.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
